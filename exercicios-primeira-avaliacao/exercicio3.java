@@ -1,6 +1,5 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 /* 
     Desenvolva um algoritmo para ler o nome, a idade, o sexo de 03 (três) indivíduos e imprimir “XXXX é criança”, se a idade for menor ou igual a 13 anos, 
@@ -12,17 +11,23 @@ import java.util.regex.Pattern;
 */
 
 class exercicio3 {
-    public static boolean isNumeric(String strNum) {
-        if (strNum == null) {
+    public static boolean isNumeric(String str) {
+        if (str == null) {
             return false;
         }
-        try {
-            double d = Double.parseDouble(strNum);
-        } catch (NumberFormatException nfe) {
-            return false;
+        char[] chars = str.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for(char c : chars) {
+            if(!Character.isDigit(c)) {
+                sb.append(c);
+            }
         }
-        return true;
-    }    
+        if (sb.length() == str.length()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String nome;
