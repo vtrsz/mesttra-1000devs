@@ -1,3 +1,5 @@
+package Exercicios_primeira_avaliacao;
+
 class Pessoa {
     private String nome;
     private int idade;

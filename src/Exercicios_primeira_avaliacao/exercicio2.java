@@ -1,3 +1,5 @@
+package Exercicios_primeira_avaliacao;
+
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -94,15 +96,27 @@ public class exercicio2 {
                             if (value > maiorQtdVotos) {
                                 maiorQtdVotos = value;
                                 candidatoVencedor = key;
+                            } else if (value == maiorQtdVotos) {
+                                candidatoVencedor = "Empate";
                             }
                             System.out.println("Percentual de Votos do " + key + " é de " + ((value * 100) / totalVotosValidos) + "%");
                         }
                     };
-            
-                    System.out.println("E o candidato vencedor é o... " + candidatoVencedor + "!!!");
+                    
+                    if (candidatoVencedor == "Empate") {
+                        voto = 0;
+                        candidatos.put("Candidato A", 0);
+                        candidatos.put("Candidato B", 0);
+                        candidatos.put("Candidato C", 0);
+                        candidatos.put("Nulo", 0);
+                        alert("\n" + new DrawVotes().getMessage() + "\nOutra votação será iniciada.\n");
+                    } else {
+                        System.out.println("E o candidato vencedor é o... " + candidatoVencedor + "!!!");
+                        success = true;
+                        scanner.close();
+                    }
                     alert("============================================\n");
-                    scanner.close();
-                    success = true;
+                    
                 }
             } catch (InputMismatchException e) {
                 scanner = new Scanner(System.in);
@@ -115,5 +129,11 @@ public class exercicio2 {
 class AllNullVotes extends RuntimeException {
     public AllNullVotes() {
         super("A votação não pode ser realizada, pois não houve votos válidos.");
+    }
+}
+
+class DrawVotes extends RuntimeException {
+    public DrawVotes() {
+        super("A votação não pode ser realizada, pois houve empate entre os candidatos.");
     }
 }

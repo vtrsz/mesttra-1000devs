@@ -1,3 +1,5 @@
+package Exercicios_primeira_avaliacao;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -42,7 +44,7 @@ class exercicio3 {
         for (int i = 0; i < 3; i++){
             try {
                 System.out.print("Digite o nome da pessoa: ");
-                nome = scanner.nextLine();
+                nome = scanner.nextLine().trim();
                 if ((nome.getClass().getName() != "java.lang.String") || isNumeric(nome) ){
                     throw new InputMismatchException("Nome inválido");
                 }

@@ -1,3 +1,5 @@
+package Exercicios_primeira_avaliacao;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

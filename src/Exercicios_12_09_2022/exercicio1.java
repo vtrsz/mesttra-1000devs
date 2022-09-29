@@ -1,10 +1,12 @@
+package Exercicios_12_09_2022;
+
+import java.util.Scanner;
+
 /*Faça um algoritmo para ler três notas de um aluno em uma disciplina e imprimir a
 sua média ponderada (as notas tem pesos respectivos de 1, 2 e 3). Calcule o valor das notas com
 base em seus pesos e além de apresentar a média, exiba a maior nota entre as 3 notas, ou a
 mensagem “As 3 notas são iguais”, ou “As notas 1 e 2 são as maiores”, “As notas 1 e 3 são as
 maiores”, “As notas 2 e 3 são as maiores” caso exista duas notas iguais e elas sejam as maiores. */
-
-import java.util.Scanner;
 
 public class exercicio1 {
         public static float getNotas(String msg) {

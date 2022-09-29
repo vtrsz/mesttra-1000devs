@@ -1,10 +1,14 @@
+package Exercicios_12_09_2022;
+
+import java.util.Scanner;
+
 /*Faça um algoritmo para ler o salário de um funcionário e aumentá-Io em 5%. Após o
-aumento, desconte 11% de INSS e 8% de FGTS e o % do IR conforme a tabela abaixo. 
-Imprima o salário inicial, o salário com o aumento, o salário final, o desconto do INSS, 
-o desconto do FGTS, o desconto do IR e o Total de Descontos (INSS+FGTS+IR). O desconto do 
-Imposto de Renda é variável. Quando o salário do funcionário muda de uma faixa de 
-desconto de IR para outra, ele pode mesmo com o aumento de 5% receber menos do que quando 
-comparado antes do aumento. O seu algoritmo deve calcular e descobrir se o novo salário (5%) 
+aumento, desconte 11% de INSS e 8% de FGTS e o % do IR conforme a tabela abaixo.
+Imprima o salário inicial, o salário com o aumento, o salário final, o desconto do INSS,
+o desconto do FGTS, o desconto do IR e o Total de Descontos (INSS+FGTS+IR). O desconto do
+Imposto de Renda é variável. Quando o salário do funcionário muda de uma faixa de
+desconto de IR para outra, ele pode mesmo com o aumento de 5% receber menos do que quando
+comparado antes do aumento. O seu algoritmo deve calcular e descobrir se o novo salário (5%)
 fará com que o usuário receba um salário final menor do que antes de aplicar os 5%.
 
 base de calculo IR
@@ -13,8 +17,6 @@ De 1.903,99 até 2.826,65    7,5%
 De 2.826,66 até 3.751,05    15%
 De 3.751,06 até 4.664,68    22,5%
 Acima de 4.664,68           27,5% */
-
-import java.util.Scanner;
 
 public class exercicio2 {
     public static float getSalario() {

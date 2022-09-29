@@ -1,3 +1,5 @@
+package Exercicios_01_09_2022;
+
 import java.util.Scanner;
 
 public class Desafio2 {
